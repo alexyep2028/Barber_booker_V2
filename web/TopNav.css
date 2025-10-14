@@ -1,0 +1,40 @@
+@keyframes barber-spin {
+    0% { background-position: 0px 0px; }
+    100% { background-position: 45px 45px; }
+  }
+  
+  .barber-pole {
+    background: repeating-linear-gradient(
+      45deg,
+      #0e47ba 0px, 
+      #0f53d9 25px,
+      #caccd2 25px,
+      #d1d5dd 50px,
+      #a20a0a 50px,
+      #c61010 75px,
+      #caccd2 75px, 
+      #d1d5dd 100px
+    );
+    position: relative;
+
+  }
+  .barber-pole::before {
+    content: '';
+    position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+  height: 30%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
+  pointer-events: none;
+  }
+  .barber-pole::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%; 
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+    pointer-events: none;
+    z-index: 1;
+  }
